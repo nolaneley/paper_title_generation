@@ -35,9 +35,8 @@ An LSTM network was used (torch.nn.LSTM) with:
 - Cross-entropy loss function
 - Adam optimization
 
-Because training took so long (several days) I didn't do much experimenting with optimizing these parameters.
+The model was trained for 40 epochs. Because training took so long (>50 hours) I didn't do much experimenting with optimizing these parameters.
 
-The model was trained for 40 epochs.
 
 ### Text generation
 In order to generate a title, we need a few characters as a starting point. These were chosen by taking the first n characters of a randomly chosen title. The text was generated until it reached a maximum length (180 characters) or the stop character (+).
@@ -70,7 +69,7 @@ Here are some example titles with various values for n (the prompt length).
 - ULTRASONOGRAPHY IN OBTIENTS WITH PERTING PROTEINS
 
 ### Impressions
-The generation tends to overuse certain terms (e.g. surgical probesses). It's a little difficult to say for certain what is causing this problem but it could be improved by one or more of the following:
+The generated titles tend to overuse certain terms (e.g. "surgical probesses" and "of the structure"). It's a little difficult to say for certain what is causing this problem but it could be improved by one or more of the following:
 - Having more/better data - Including more titles or filtering out certain titles to have a more coherent dataset.
 - Longer training (more epochs) - After 40 epochs, the cross-entropy loss was, for the most part, still decreasing, indicating the model had not yet converged and may benefit from additional training
 - Higher dropout rate - The model might be overfitting to some patterns in the dataset. Increasing the dropout rate could help with this, though it might slow convergence.
