@@ -1,9 +1,9 @@
 # Generating academic paper titles using a neural network: Project overview
 ### Introduction
-To a layperson, the titles of academic papers often seem arcane and incomprehensible. I thought this would be the perfect content to use as the basis for a text generation project. 
+To a layperson, the titles of academic papers often seem arcane and incomprehensible—full of obscure words that might as well be made up. I thought, therefore, that this might be interesting as the basis for a text generation project. 
 
 This project showcases:
-- **LSTM network**: As the basis of the text generator is a long short-term memory network, a type of recurrent neural network (RNN).
+- **LSTM network**: As the basis of the text generation model is a long short-term memory network, a type of recurrent neural network (RNN).
 - **Deep Learning with PyTorch**: PyTorch is used to implement the model creation and training.
 - **Regular expressions**: As part of the data cleaning and preparation, regular expressions are used in order to ensure the validity of input strings.
 
